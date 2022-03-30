@@ -61,7 +61,7 @@ def lambda_handler(event, context):
             labels = [word.lower() for word in photo['_source']['labels']]
             if keyword in labels:
                 objectKey = photo['_source']['objectKey']
-                img_url = 'https://hw2-b2-photo-storage.s3.amazonaws.com/' + objectKey
+                img_url = 'https://hw2-photos-b2.s3.amazonaws.com/' + objectKey
                 img_list.add(img_url)
     
     if img_list:
